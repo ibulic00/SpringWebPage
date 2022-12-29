@@ -8,12 +8,12 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 public class AuthorController {
 
-    AuthorRepository authorRepository;
+   private final AuthorRepository authorRepository;
 
     public AuthorController(AuthorRepository authorRepository) {
         this.authorRepository = authorRepository;
     }
-    @RequestMapping(name = "/authors")
+    @RequestMapping("/authors")
     public String getAuthors(Model model){
 
         model.addAttribute("Authors", authorRepository.findAll());
