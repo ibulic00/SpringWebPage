@@ -9,8 +9,14 @@
 
 <table>
     <tr>
-    
-
+        <th>ID</th>
+        <th>First Name</th>
+        <th>Second Name</th>
+    </tr>
+    <tr th:each="author:${authors}">
+        <td th:text="author.id"></td>
+        <td th:text="author.firstName"></td>
+        <td th:text="author.last.Name "></td>
     </tr>
 
 
